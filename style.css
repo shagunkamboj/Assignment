@@ -1,76 +1,149 @@
-nav{
-    background-color: #C7D8F9;
+.bg-orange
+{
+    background-color: rgb(226, 105, 62);
 }
-.div-padding{
-    padding: 15px;
-}
-.btn{
-    width: 100px;
-}
-nav img{
-    max-width: 220px;
-    /* padding-top: 20px; */
-}
-.container-1{
-    background-color: #C75F5F;
-    height: 400px;
-    position: relative;
-}
-.text{
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
+
+.navbar-nav li a
+{
     color: white;
 }
-nav ul li {
-    list-style: none;
-    /* margin-top: 24px; */
+.carousel-item
+{
+    height: 500px;
+
 }
-nav ul li a{
+
+.carousel-item img
+{
+    height: 500px;
+
+}
+
+.relative
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: 0;
+}
+
+.carousel-caption
+{
+    border-radius: 185px;
+    padding: 2px 50px;
+}
+
+.carousel-caption a{
+    color: white;
+    background-color: orangered;
     text-decoration: none;
-    margin-right: 45px;
-    color: black;
+    padding:12px 0;
+    display: inline-block;
+    width: 150px;
+    border: 1px solid orangered;
+}
+
+.row
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about .Title
+{
+    text-align: center;
+    padding-bottom: 60px;
+
+}
+
+.about 
+{
+    padding:90px 0;
+}
+
+.Title h2{
+    
+    border-bottom: orangered solid 1px;
+    width: 400px;
+    margin: 0px auto;
+}
+.Title p {
+    padding-top: 15px;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.flexcss 
+{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+.about .info 
+{
+    max-width: 530px;
+    width: 100%;
+    padding: 18px 0;
+    text-align: center;
+}
+
+.about a{
+
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    border: 1px solid black;
+    line-height: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 189px;
+    margin: 0 auto;
+    padding: 15px 0;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.screenshot-about
+{
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.screenshot-about h2{
+    border-bottom: 1px solid orangered;
+    width:400px;
+    margin: 0 auto;
     font-weight: bold;
 }
-input{
-    border: 0;
-    /* b//order-bottom: 1px solid black; */
-    width: 40%;
+
+.screenshot-about p{
+    padding-top: 10px;
+    
 }
-button{
-    background-color: #F13624;
-    color: white;
-    border: 0;
-    width: 150px;
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 970px)  {
+    
+.about .info 
+{
+    max-width: 660px; 
+    margin: 0;
 }
-input{
-    margin-bottom: 30px;
-    margin-right: 34px;
+
+
 }
-.box-1{
-    border: 2px solid red;
-}
-.inside-box-1{
-    padding: 20px;
-}
-.inside-input{
-    border: 0;
-    border-bottom: 2px solid black;
-    margin-right: 34px;
-    margin-bottom: 56px;
-}
-.inside-box-1 a{
-    color: black;
-    text-decoration: underline;
-     text-decoration-color: red;
-}
-p{
-    font-size: 18px;
-}
-button{
-    padding: 15px;
-}
-footer{
-    background-color: #C7D8F9;
-}
+
