@@ -33,7 +33,7 @@
     padding: 2px 50px;
 }
 
-.carousel-caption a{
+.carousel-caption #myBtn{
     color: white;
     background-color: orangered;
     text-decoration: none;
@@ -126,6 +126,7 @@ img{
     padding-top: 10px;
     
 }
+
 .fixed
 {
     z-index: 9999;
@@ -136,11 +137,37 @@ img{
 }
 
 
+.modal-content {
+    background-color: #e49393;
+    margin: auto;
+    padding: 25px;
+    border: 1px solid #888;
+    width: 80%;
+    color: black;
+    display: flex;
+  }
+  
+  /* The Close Button */ 
+   .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .modal-content .flex
+  {
+    display: flex;
+  }
 
-
-
-
-
+  
 
 
 @media only screen and (max-width: 970px)  {
