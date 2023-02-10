@@ -1,0 +1,97 @@
+header
+{
+    background-color:#c7d8f9;
+    height: 50px;
+}
+header img {
+    max-height: 30px;
+
+}
+
+header ul li{
+    list-style-type: none;
+    float: left;
+    margin-right: 25px;
+    font-size: 18px;
+    font-weight: bold;
+}
+header ul{
+    margin:15px 0 0 0;
+    padding: 0px;
+    float: right;
+} 
+.container h2{
+    background-color: #c75f5f;
+    color: white;
+    padding: 115px;
+    text-align: center;
+    margin:2px;
+
+}
+input{
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    width: 90%;
+}
+
+.info 
+{
+    text-align: justify;
+    border: 1px solid #f13624;
+    padding: 30px;
+    display: inline-block;
+    font-size: 18px;
+    margin-left: 25px;
+}
+
+button {
+    width: 15%;
+    padding:5px;
+    background-color: #f13624;
+    color: white;
+    border: 1px solid #f13624;
+}
+
+.info h3 , .info h5 
+{
+    font-weight: bold;
+}
+.info p {
+    text-decoration: underline #f13624;
+    color:gray;
+}
+
+footer{
+    background-color: #c7d8f9;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+form .col-md-4 
+{
+    width: 50%;
+}
+
+.formss
+{
+    margin-left: 20px;
+}
+
+input 
+{
+    width: 100%;
+}
+
+select
+{
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style:hidden;
+    border-bottom-style: groove;
+
+    
+}
