@@ -126,7 +126,14 @@ img{
     padding-top: 10px;
     
 }
-
+.fixed
+{
+    z-index: 9999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
 
 
 
