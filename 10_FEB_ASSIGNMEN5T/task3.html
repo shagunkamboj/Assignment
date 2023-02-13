@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src=
+"https://code.jquery.com/jquery-git.js">
+	</script>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+
+	<style>
+	body {
+		text-align: center;
+	}
+	#nonSelected {
+		position: absolute;
+		top: 150px;
+		left: 350px;
+		width: 250px;
+		height: 280px;
+		background-color: lightblue;
+		border-width: 2px;
+		border-style: dotted;
+		border-color: black;
+		padding: 10px;
+	}
+
+	#selected {
+		position: absolute;
+		top: 150px;
+		left: 20px;
+		width: 250px;
+		height: 280px;
+		background-color: lightgreen;
+		font-style: italic;
+		border-width: 2px;
+		border-style: solid;
+		border-color: black;
+		padding: 10px;
+	}
+	</style>
+</head>
+<body>
+	<h2 style="color: green">assignment3</h2>
+	<b>append and prepend.</b>
+
+	<div id="nonSelected">
+        
+        <div id="div1" onclick="move(this)"
+            style="background-color: rgb(165, 229, 70)">
+            div 1
+        </div>
+        <div id="div2" onclick="move(this)"
+            style="background-color: rgb(88, 88, 245)">
+            div 2
+        </div>
+        <div id="div3" onclick="move(this)"
+            style="background-color: rgb(232, 78, 78)">
+            div 3
+        </div>
+        <div id="div1" onclick="move(this)"
+            style="background-color: rgb(165, 229, 70)">
+            div 4
+        </div>
+        <div id="div2" onclick="move(this)"
+            style="background-color: rgb(88, 88, 245)">
+            div 5
+        </div>
+        <div id="div3" onclick="move(this)"
+            style="background-color: rgb(232, 78, 78)">
+            div 6
+        </div>
+        <div id="div1" onclick="move(this)"
+            style="background-color: rgb(165, 229, 70)">
+            div 7
+        </div>
+        <div id="div2" onclick="move(this)"
+            style="background-color: rgb(88, 88, 245)">
+            div 8
+        </div>
+        <div id="div3" onclick="move(this)"
+            style="background-color: rgb(232, 78, 78)">
+            div 9
+        </div>
+        <div id="div1" onclick="move(this)"
+            style="background-color: rgb(165, 229, 70)">
+            div 10
+        </div>
+
+	</div>
+	<div id="selected"></div>
+	<script>
+	function move(elem) {
+        console.log($(elem).parent().attr("id"));
+		if ($(elem).parent().attr("id") == "nonSelected") {
+		$(elem).detach().appendTo("#selected");
+		} 
+        else {
+		$(elem).detach().prependTo("#nonSelected");
+		}
+	}
+	</script>
+</body>
+</html>
