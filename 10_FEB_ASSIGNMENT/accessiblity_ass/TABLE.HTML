@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    table {
+position: relative;
+border-collapse: collapse;
+width: 70%;
+margin-bottom: 40px;
+}
+table:focus, table:hover {
+outline-style: solid;
+outline-color: blue;
+}
+
+
+
+td,
+th {
+padding: 2.15em;
+}
+
+thead th {
+position: -webkit-sticky; /* for Safari */
+position: sticky;
+top: 0;
+background:pink;
+color: black;
+}
+
+thead th:first-child {
+left: 0;
+z-index: 1;
+}
+
+tbody th {
+position: -webkit-sticky; /* for Safari */
+position: sticky;
+left: 0;
+background: pink;
+border-right: 1px solid #cccccc;
+}
+
+tbody td{
+border-right: 1px solid pink;
+border-bottom: 1px solid pink;   
+}
+
+table > tr:hover,
+tbody tr:hover {
+background: #bdf;
+}
+
+
+body {
+  max-width: 600px;
+  padding: 1.3em;
+  font-size: 130%;
+}
+
+[role="dialog"] {
+  position: fixed;
+  
+  background: #ddd;
+  box-shadow: 0.25em 0.25em #aaa;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 1em;
+  max-height: 30vh;
+  max-width: 50vw;
+  border: 0;
+}
+
+
+
+
+#title {
+  font-weight: bold;
+}
+[role="dialog"] * + * {
+    margin-top: 0.5em;
+  }
+
+button {
+  cursor: pointer;
+  background: black;
+  border: 0;
+  color: #fff;
+  padding: 0.125em 0.5em;
+}
+
+button:focus, button:hover  {
+  outline: 3px solid pink;
+}
+
+#close {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  margin-top: 0;
+  line-height: 1;
+}
+
+[role="dialog"][open] {
+  display: block;
+}
+
+#cover {
+  background: rgb(134, 134, 136);
+  opacity: 0.75;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+
+ #trigger
+{
+  border: none;
+  padding:14px 37px 21px 20px;
+  text-align: center;
+  font-size: 25px;
+
+}
+
+  </style>
+
+
+</head>
+<body>
+  <table>
+    <caption>
+        NO OF WEEKS 
+    </caption>
+    <thead>
+      <tr>
+        <th>TIME</th>
+        <th>MONDAY</th>
+        <th>TUESDAY</th>
+        <th>WEDNESDAY</th>
+        <th>THURSDAY</th>
+        <th>FRIDAY</th>
+        <th>SATURDAY</th>
+        <th>SUNDAY</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>9:00 AM</th>
+        <td>PYTHON</td>
+        <td> FED</td>
+        <td> PYTHON</td>
+        <td>FED</td>
+        <td>PYTHON</td>
+        <td>FED</td>
+        <td>PYTHON</td>
+      </tr>
+      <tr>
+        <th>10:00 AM</th>
+        <td>PYTHON</td>
+        <td>FED</td>
+        <td>PYTHON</td>
+        <td>FED</td>
+        <td>PYTHON</td>
+        <td>PYTHON</td>
+        <td>FED</td>
+      </tr>
+      <tr>
+        <th>11:00 AM</th>
+        <td>PYTHON</td>
+        <td> FED</td>
+        <td> PYTHON</td>
+        <td>FED</td>
+        <td>PYTHON</td>
+        <td>FED</td>
+        <td>PYTHON</td>
+      </tr>
+      <tr>
+        <th>12:00 PM</th>
+        <td>PYTHON</td>
+        <td> FED</td>
+        <td> PYTHON</td>
+        <td>FED</td>
+        <td>PYTHON</td>
+        <td>FED</td>
+        <td>PYTHON</td>
+      </tr>
+      <tr>
+        <th>1:00 PM</th>
+        <td>PYTHON</td>
+        <td> FED</td>
+        <td> PYTHON</td>
+        <td>FED</td>
+        <td>PYTHON</td>
+        <td>FED</td>
+        <td>PYTHON</td>
+      </tr>
+    </tbody>
+  </table>
+  <button id="trigger">dialog box</button>
+  <div id="cover"></div>
+  <div id="dialog" role="dialog" aria-labelledby="title" aria-describedby="description">
+    <div id="title"> dialog title</div>
+    <div id="description">dilog information</div>
+    <button id="close" aria-label="close">&times;</button>
+  </div>
+  
+</body>
+<script>
+  var trigger = document.getElementById('trigger');
+var dialog = document.getElementById('dialog');
+var close = document.getElementById('close');
+
+function openDialog() {
+  dialog.setAttribute('open', '');
+  close.focus();
+  close.addEventListener('keydown', function(e) {
+    if (e.keyCode == 9) {
+      e.preventDefault();
+    }
+  });
+  document.getElementById('cover').style.display = 'block';
+  document.addEventListener('keydown', addESC);
+}
+
+function closeDialog() {
+  dialog.removeAttribute('open');
+  trigger.focus();      
+  document.getElementById('cover').style.display = 'none';
+  document.removeEventListener('keydown', addESC);
+}
+
+var addESC = function(e) {
+  if (e.keyCode == 27) {
+    closeDialog();
+  } 
+};
+
+trigger.addEventListener('click', function() {
+  openDialog();
+});
+
+close.addEventListener('click', function() {
+  closeDialog();
+});
+</script>
+</html>

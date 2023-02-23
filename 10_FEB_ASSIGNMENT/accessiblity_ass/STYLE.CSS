@@ -1,0 +1,369 @@
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 20px auto;
+    max-width: 880px;
+    background-color: pink;
+}
+
+nav h1{
+  color: pink;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+a.table {
+    color: skyblue;
+    text-decoration: none;
+    float: right;
+}
+
+a.accor {
+  color: blue;
+  text-decoration: none;
+  float: right;
+  padding-right: 12px;
+}
+
+
+a {
+    outline: none;
+    text-decoration: none;
+    padding: 3px 2px 0;
+
+  }
+  
+  a:link {
+    color: red;
+  }
+  
+  a:visited {
+    color: red;
+  }
+  
+  a:focus {
+    border-bottom: 2px solid;
+    background: #b4d798;
+    text-decoration: none;
+
+  }
+  
+  a:hover {
+    border-bottom: 2px solid;
+    background: #bfe9a1;
+  }
+button,
+input
+ {
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type:none;
+  appearance: none;
+
+}
+
+input + span {
+    position: relative;
+  }
+  
+input:required + span::after 
+{
+    font-size: 0.7rem;
+    position: absolute;
+    content: "required";
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+     top:-60px;
+    left: 80px; 
+  }
+
+  
+
+fieldset {
+    position: relative;
+  }
+  
+legend {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  fieldset  li {
+    margin-bottom: 20px;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  input[type="radio"]::before {
+    display: block;
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border-radius: 6px;
+    background-color: rgb(249, 7, 7);
+    font-size: 1.2em;
+    transform: translate(3px, 3px) scale(0);
+    transform-origin: center;
+    transition: all 0.3s ease-in;
+  }
+  
+  input[type="radio"]:checked::before {
+    transform: translate(0px, 0px) scale(1);
+  }
+  
+  input:default ~ span::after {
+    font-size: 0.6rem;
+    position: absolute;
+    content: "Default";
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+    right: -60px;
+    top: -4px;
+  }
+
+
+
+
+   input[type="checkbox"] {
+    appearance: none;
+    position: relative;
+    width: 1em;
+    height: 1em;
+    border: 1px solid rgb(128, 124, 124);
+    vertical-align: -2px;
+    color: purple
+  }
+
+  input[type="checkbox"]::before {
+    content: "✔";
+    position: absolute;
+    font-size: 1.4em;
+    right: -1px;
+    top: -0.3em;
+    visibility: hidden;
+  }
+  
+  input[type="checkbox"]:checked::before {
+    visibility: visible;
+  } 
+  
+  input[type="checkbox"]:disabled {
+    border-color: black;
+    background: #eeeaea;
+    color: rgb(105, 104, 104);
+  }
+
+
+
+  input:required {
+    border: 1px solid black;
+  }
+  
+  input:optional {
+    border: 1px solid rgb(175, 175, 175);
+  }
+
+ 
+button,
+label,
+input[type="text"],
+input[type="email"],
+input[type='month'] {
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 6px;
+  height: 32px;
+}
+
+input[type="text"]
+ {
+  box-shadow: inset 1px 1px 3px #cbc7c7;
+  border-radius: 5px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+button {
+  width: 60%;
+  margin: 0 auto;
+} 
+
+
+button:active{
+    background: rgb(6, 6, 248);
+}
+
+  
+table {
+    position: relative;
+    border-collapse: collapse;
+    width: 70%;
+    margin-bottom: 42px;
+}
+table:focus, table:hover {
+    outline-style: solid;
+    outline-color: black;
+}
+
+
+  
+  td,
+  th {
+    padding: 2.35em;
+  }
+  
+  thead th {
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
+    background: #000;
+    color: #FFF;
+  }
+  
+  thead th:first-child {
+    left: 0;
+    z-index: 1;
+  }
+  
+  tbody th {
+    position: -webkit-sticky; 
+    position: sticky;
+    left: 0;
+    background: #e9d9d9;
+    border-right: 2px solid #f5bfbf;
+  }
+
+  tbody td{
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;   
+  }
+
+table > tr:hover,
+tbody tr:hover {
+  background: rgb(191, 221, 251);
+}
+
+div #updateDetails
+{
+    background-color: purple;
+    border: none;
+    padding: 12px 0 28px 0 ;
+    text-align: center;
+    color: white;
+    width: 50%;
+}
+
+#telephone
+{
+    color: purple;
+    font-weight: bold;
+}
+
+#telephone:focus-within, #telephone:hover
+{
+    color: purple;
+    font-weight: bold;
+    outline-style: dotted;
+    outline-color: rgb(86, 151, 86);
+    outline-width: 2px;
+    outline-offset: 2px;
+
+
+}
+
+button:focus, button:hover  {
+    outline: 3px solid #8d7f47;
+  }
+  
+#close{
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    font-size: 30px;
+    position: absolute;
+    top: 0.6em;
+    right: 0.6rem;
+    margin-top: 0;
+    line-height: 1;
+    width: 18px;
+}
+
+#close:focus  {
+    outline: 3px solid #d4c27a;
+    padding:0 0 0 0;
+  }
+
+  ul {
+    list-style:none;
+  } 
+  
+  #accordion button:focus{
+    border-radius:0px;
+    outline:none;
+  }
+  #accordion button{
+      outline: none;
+      background-color:rgb(121, 175, 121);
+      padding: 10px;   
+      border:none;
+      border-bottom: 1px solid rgb(58, 92, 92); 
+      color: white;
+      width: 100%;
+      text-align:left;
+      font-size:18px;
+      border-radius:0px;
+  }
+  #accordion li{
+     border: 2px solid rgb(82, 119, 119);
+    border-bottom: none;
+  
+  }
+  .acc-item-content{
+    padding: 0px 9px;
+  }
+  .acc-item:last-child {
+    border-bottom: 1px solid rgb(68, 101, 101);
+  }
+  #accordion button::after{
+    content: "\002B";
+    font-weight: 950;
+    font-size: 18px;
+    float:right;
+  }
+  
+  #accordion{
+    width:82%;
+    max-width: 750px;
+    min-width: 250px;
+    margin:auto;
+  }
+  .acc-item-content{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+  }
+  
+  #accordion button.active:after{
+      content: "\2212";
+    font-weight: 840;
+    font-size: 20px;
+    float:right;
+  }

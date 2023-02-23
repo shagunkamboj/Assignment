@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        window.addEventListener("DOMContentLoaded", (event) => {
+      let buttons = document.querySelectorAll("#accordion button");
+      buttons.forEach((button) => {
+        let content = button.nextElementSibling;
+        button.addEventListener("click", (event) => {
+          if (button.classList.contains("active")) {
+            button.classList.remove("active");
+            button.setAttribute("aria-expanded", false);
+            content.style.maxHeight = null;
+            content.setAttribute("aria-hidden", true);
+          } else {
+            button.classList.add("active");
+            button.setAttribute("aria-expanded", true);
+            content.style.maxHeight = content.scrollHeight + "px";
+            content.setAttribute("aria-hidden", false);
+          }
+        });
+      });
+    });
+    </script>
+</head>
+
+<body>
+    <ul id="accordion">
+        <li>
+          <button aria-controls="content-1" aria-expanded="false" id="accordion-control-1">what is html stand for</button>
+          <div class="acc-item-content" aria-hidden="true" id="content-1">
+            <p>hypertext markup language</p>
+          </div>
+        </li>
+        <li>
+          <button aria-controls="content-2" aria-expanded="false" id="accordion-control-2">what is python</button>
+          <div class="acc-item-content" aria-hidden="true" id="content-2">
+            <p>python is a object orient and easy language</p>
+          </div>
+        </li>
+        <li>
+          <button aria-controls="content-3" aria-expanded="false" id="accordion-control-3">who invented python</button>
+          <div class="acc-item-content" aria-hidden="true" id="content-3">
+            <p>guido van roussem</p>
+          </div>
+        </li>
+        <li>
+          <button aria-controls="content-4" aria-expanded="false" id="accordion-control-4">what is css </button>
+          <div class="acc-item-content" aria-hidden="true" id="content-4">
+            <p>cascading style sheet</p>
+          </div>
+        </li>
+        <li>
+          <button aria-controls="content-5" aria-expanded="false" id="accordion-control-5">What is the origin of CSS?</button>
+          <div class="acc-item-content" aria-hidden="true" id="content-5">
+            <p>GML (Standard Generalized Markup Language) is the origin of CSS. It is a language that defines markup languages.</p>
+          </div>
+        </li>
+        <li>
+            <button aria-controls="content-5" aria-expanded="false" id="accordion-control-5">What are the different variations of CSS?</button>
+            <div class="acc-item-content" aria-hidden="true" id="content-5">
+              <p>CSS1
+                CSS2
+                CSS2.1
+                CSS3
+                CSS4.</p>
+            </div>
+          </li>
+          <li>
+            <button aria-controls="content-5" aria-expanded="false" id="accordion-control-5">How can you integrate CSS on a web page?</button>
+            <div class="acc-item-content" aria-hidden="true" id="content-5">
+              <p>There are three methods to integrate CSS on web pages.
+
+                Inline method - It is used to insert style sheets in HTML document
+                Embedded/Internal method - It is used to add a unique style to a single document
+                Linked/Imported/External method - It is used when you want to make changes on multiple pages.</p>
+            </div>
+          </li>
+      </ul>
+</body>
+
+</html>
